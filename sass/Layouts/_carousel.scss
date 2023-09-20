@@ -1,0 +1,42 @@
+.carousel {
+  height: 600px;
+  background-image: url(../../img/carousel.png);
+  background-image: contain;
+  background-position: center;
+  // background-repeat: no-repeat;
+  background-size: cover;
+  .row {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 -300px;
+  }
+  .col-4 {
+    padding-left: 200px;
+    h1 {
+      font-weight: 300;
+    }
+    p {
+      font-weight: 300;
+    }
+    .btn-buy {
+      background: $color-yellow-1;
+      color: $color-white-1;
+    }
+  }
+  .list-doc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .doc {
+      width: 10px;
+      height: 10px;
+      background-color: black;
+      padding: 8px;
+      margin: 80px 10px 10px 10px;
+      border-radius: 100px;
+      cursor: pointer;
+      opacity: 0.1;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.cart-body {
+  padding: 50px 70px;
+  h1 {
+    @include styleText($color-dark-1, $fs-3, $fw-2);
+    &::after {
+      position: relative;
+      content: "";
+      display: block;
+      width: 1760px;
+      height: 2px;
+      bottom: -40px;
+      background-color: #dedddc;
+    }
+  }
+  .info-cart {
+    margin-top: 100px;
+    .title-cart {
+      background-color: #d9d9d9;
+      .list-cart {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        & li {
+          list-style: none;
+        }
+        .list-check {
+          color: purple;
+        }
+      }
+    }
+  }
+}

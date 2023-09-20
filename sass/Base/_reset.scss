@@ -1,0 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Inter", sans-serif;
+  @include styleText($color-dark-1, $fs-2, $fw-1);
+  background-color: #fff;
+}
