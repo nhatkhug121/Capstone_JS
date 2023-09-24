@@ -126,8 +126,13 @@ header .header-2 .nav-link {
 }
 .product .container .row .item {
   margin: 40px auto;
-  width: 220px;
+  width: 100%;
   height: 156px;
+}
+.product .container .row .item .img-product {
+  text-align: center;
+  width: 200px;
+  height: 200px;
 }
 .product .container .row .product__name {
   color: #000000;

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Store Shoes</title>
+    <title>Details</title>
     <!-- thư viện -->
     <!-- gg font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -28,18 +28,19 @@
       integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="../css/main.css" />
   </head>
   <body>
     <header>
       <nav class="navbar">
-        <a href="#"><img src="./img/Logo.png" alt="" /></a>
+        <a href="#"><img src="../img/Logo.png" alt="" /></a>
         <ul class="list-header">
           <li>
             <a class="cart" href="./cart.html"
               ><i class="fa-solid fa-cart-shopping"></i
             ></a>
           </li>
+
           <li>Login</li>
           <li>Register</li>
         </ul>
@@ -56,92 +57,7 @@
         </div>
       </nav>
     </header>
-    <section class="carousel">
-      <div class="container">
-        <div class="row">
-          <div class="col-8">
-            <img class="" src="./img/banner.png" alt="" />
-          </div>
-          <div class="col-4">
-            <h1>Product name</h1>
-            <p>Product description ....</p>
-            <button class="btn btn-buy">Buy now</button>
-          </div>
-        </div>
-        <div class="list-doc">
-          <div class="doc doc__active"></div>
-          <div class="doc"></div>
-          <div class="doc"></div>
-        </div>
-      </div>
-    </section>
-    <section class="product">
-      <div class="container">
-        <h1 class="product__title">-Product Feature -</h1>
-        <div class="row">
-          <div class="col">
-            <div class="item"><img src="./img/product.png" alt="" /></div>
-            <h2 class="product__name">Adidas Prophere</h2>
-            <p class="product__des">short descript ...</p>
-            <div class="product__buy">
-              <div class="btn btn-buy">Buy now</div>
-              <div class="product__price">85$</div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="item"><img src="./img/product.png" alt="" /></div>
-            <h2 class="product__name">Adidas Prophere</h2>
-            <p class="product__des">short descript ...</p>
-            <div class="product__buy">
-              <div class="btn btn-buy">Buy now</div>
-              <div class="product__price">85$</div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="top-item">
-              <div class="item"><img src="./img/product.png" alt="" /></div>
-              <h2 class="product__name">Adidas Prophere</h2>
-              <p class="product__des">short descript ...</p>
-            </div>
-            <div class="product__buy">
-              <div class="btn btn-buy">Buy now</div>
-              <div class="product__price">85$</div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <div class="item"><img src="./img/product.png" alt="" /></div>
-            <h2 class="product__name">Adidas Prophere</h2>
-            <p class="product__des">short descript ...</p>
-            <div class="product__buy">
-              <div class="btn btn-buy">Buy now</div>
-              <div class="product__price">85$</div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="item"><img src="./img/product.png" alt="" /></div>
-            <h2 class="product__name">Adidas Prophere</h2>
-            <p class="product__des">short descript ...</p>
-            <div class="product__buy">
-              <div class="btn btn-buy">Buy now</div>
-              <div class="product__price">85$</div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="top-item">
-              <div class="item"><img src="./img/product.png" alt="" /></div>
-              <h2 class="product__name">Adidas Prophere</h2>
-              <p class="product__des">short descript ...</p>
-            </div>
-            <div class="product__buy">
-              <div class="btn btn-buy">Buy now</div>
-              <div class="product__price">85$</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <section id="detail" class="detail"></section>
     <footer>
       <div class="container">
         <div class="row">
@@ -182,7 +98,6 @@
         © 2022 Cybersoft All Rights Reserved | Design Theme by Trương Tấn Khải.
       </div>
     </footer>
-
     <!-- javascript -->
     <script
       src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
@@ -194,5 +109,9 @@
       integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <!-- <script src="../Model/Product.js"></script> -->
+    <script src="../Services/callAPI.js"></script>
+    <script src="../Controller/main.js"></script>
   </body>
 </html>

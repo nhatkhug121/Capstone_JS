@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <!-- thư viện -->
+    <!-- gg font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- BS4 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a href="#"><img src="../img/Logo.png" alt="" /></a>
+        <ul class="list-header">
+          <li>
+            <a class="cart" href="./cart.html"
+              ><i class="fa-solid fa-cart-shopping"></i
+            ></a>
+          </li>
+
+          <li>Login</li>
+          <li>Register</li>
+        </ul>
+      </nav>
+      <nav class="header-2 navbar navbar-expand-lg navbar-white bg-white">
+        <a class="active navbar-brand" href="#">Home</a>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link" href="#">Men</a>
+            <a class="nav-link" href="#">Woman</a>
+            <a class="nav-link" href="#">Kid</a>
+            <a class="nav-link" href="#">Sport</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div id="Register" class="Register"></div>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="item">
+              <h3>GET HELP</h3>
+              <ul>
+                <li>Home</li>
+                <li>Nike</li>
+                <li>Adidas</li>
+                <li>Contact</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col">
+            <div class="item">
+              <h3>SUPPORT</h3>
+              <ul>
+                <li>About</li>
+                <li>Contact</li>
+                <li>Help</li>
+                <li>Phone</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col">
+            <div class="item">
+              <h3>REGISTER</h3>
+              <ul>
+                <li>Register</li>
+                <li>Login</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copy-right">
+        © 2022 Cybersoft All Rights Reserved | Design Theme by Trương Tấn Khải.
+      </div>
+    </footer>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="../Model/Product.js"></script>
+    <script src="../Services/callAPI.js"></script>
+    <script src="../Controller/main.js"></script>
+  </body>
+</html>

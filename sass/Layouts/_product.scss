@@ -16,8 +16,13 @@
       }
       .item {
         margin: 40px auto;
-        width: 220px;
+        width: 100%;
         height: 156px;
+        .img-product {
+          text-align: center;
+          width: 200px;
+          height: 200px;
+        }
       }
       .product__name {
         @include styleText($color-dark-1, 24px, $fw-1);
