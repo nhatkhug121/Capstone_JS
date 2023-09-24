@@ -1,7 +1,3 @@
-//! Hàm dùng chung và biến toàn cục
-
-// console.log(dssv.mangSV)
-
 function queryELE(query) {
   return document.querySelector(query);
 }
@@ -29,38 +25,31 @@ function Sighup() {
   var promiseObj = axios({
     method: "get",
     url: "https://shop.cyberlearn.vn/api/Users/signup",
-  }); //pending
+  });
 }
 function GetProduct() {
   var promiseObj = axios({
     method: "get",
     url: "https://shop.cyberlearn.vn/api/Product",
-  }); //pending
+  });
 
-  // then, catch
-  //result / response
   promiseObj.then(function (result) {
-    //thành công
-    console.log(result); //! mỗi BE trả kết quả khác nhau
-    console.log(result.data.content); //! mỗi BE trả kết quả khác nhau
+    console.log(result);
+    console.log(result.data.content);
 
-    //TODO: Hiển thị danh sách
     hienThiDSSP(result.data.content);
   });
 
   promiseObj.catch(function (error) {
-    //thất bại
     console.log(error);
-    // alert("Hệ thống đang bảo trì");
   });
 }
 
 GetProduct();
 
 function hienThiDSSP(mang) {
-  var content = ""; // chứa chuỗi các thẻ tr
+  var content = "";
 
-  //! map(phần tử của mảng, vị trí phần tử) : duyệt mảng, lấy từng phần tử của mảng mà không cần vị trí. Chỉ dùng với Array. Chỉ dừng khi hết mảng.
   mang.map(function (sp) {
     content += `
     <div class="row">
@@ -77,7 +66,6 @@ function hienThiDSSP(mang) {
           </div>
     </div>
     `;
-    // content mới = content ban đầu + trELE
   });
 
   // console.log(content);
@@ -88,28 +76,25 @@ function showDetails() {
   var promiseObj = axios({
     method: "get",
     url: "https://shop.cyberlearn.vn/api/Product/getbyid",
-  }); //pending
+  });
 
   promiseObj.then(function (result) {
     //thành công
-    console.log(result); //! mỗi BE trả kết quả khác nhau
-    console.log(result.data.content); //! mỗi BE trả kết quả khác nhau
+    console.log(result);
+    console.log(result.data.content);
 
     //TODO: Hiển thị danh sách
     ShowDetail(result.data.content);
   });
 
   promiseObj.catch(function (error) {
-    //thất bại
     console.log(error);
-    // alert("Hệ thống đang bảo trì");
   });
 }
 
 function ShowDetail(mang) {
-  var content = ""; // chứa chuỗi các thẻ tr
+  var content = "";
 
-  //! map(phần tử của mảng, vị trí phần tử) : duyệt mảng, lấy từng phần tử của mảng mà không cần vị trí. Chỉ dùng với Array. Chỉ dừng khi hết mảng.
   mang.map(function (sp) {
     content += `
     <div class="row">
@@ -126,55 +111,8 @@ function ShowDetail(mang) {
           </div>
     </div>
     `;
-    // content mới = content ban đầu + trELE
   });
 
   // console.log(content);
   queryELE("#detail").innerHTML = content;
 }
-
-// function listProduct() {
-//   var promiseObj = axios({
-//     method: "get",
-//     url: "https://shop.cyberlearn.vn/api/Product",
-//   }); //pending
-
-//   promiseObj.then(function (result) {
-//     //thành công
-//     console.log(result); //! mỗi BE trả kết quả khác nhau
-//     console.log(result.data.content); //! mỗi BE trả kết quả khác nhau
-
-//     //TODO: Hiển thị danh sách
-//     List(result.data.content);
-//   });
-
-//   promiseObj.catch(function (error) {
-//     //thất bại
-//     console.log(error);
-//     // alert("Hệ thống đang bảo trì");
-//   });
-// }
-
-// function List(mang) {
-//   var content = ""; // chứa chuỗi các thẻ tr
-
-//   //! map(phần tử của mảng, vị trí phần tử) : duyệt mảng, lấy từng phần tử của mảng mà không cần vị trí. Chỉ dùng với Array. Chỉ dừng khi hết mảng.
-//   mang.map(function (sp) {
-//     content += `
-//     <thead>
-//     <tr>
-//     <th><input class="list-check" type="checkbox" checked/></th>
-//     <th>${sp.id}</th>
-//     <th>${sp.image}</th>
-//     <th>${sp.name}</th>
-//     <th>${sp.price}</th>
-//     <th>quantity</th>
-//     <th>total</th>
-//     <th>action</th>
-//     </tr>
-//   </thead>
-//     `;
-//     // content mới = content ban đầu + trELE
-//   });
-//   queryELE("#tbodyProduct").innerHTML = content;
-// }
